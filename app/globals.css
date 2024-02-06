@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  background-color: #080808ff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+  font-family: Glamore;
+}
+
+p {
+  color: #afafaf;
+  /* font-family: Basis Grotesque Pro; */
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+.section-heading-60 {
+  font-size: 60px;
+  line-height: 80px;
+  font-weight: normal;
+}
+
+.section-padding {
+  padding: 100px 80px;
+}
+.section-heading-44 {
+  font-size: 44px;
+  line-height: 70px;
+}
+
+@media (max-width: 768px) {
+  .section-heading-60 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .section-padding {
+    padding: 30px 24px;
+  }
+  .section-heading-44 {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .golden-gradient-text {
+    background: linear-gradient(270deg, #c66e26 0%, #f8d7a7 100%),
+      linear-gradient(0deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .golden-gradient-bg {
+    background: linear-gradient(45deg, #f8d7a7, #c66e26);
+  }
+  /* .btn-outline{
+
+  } */
+}
