@@ -1,36 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- 'use client'
+import { useState, useEffect } from 'react';
+import { motion, useAnimation } from 'framer-motion';
+import Image from "next/image";
+import { BottleImage } from "@/public/assets";
 
-## Getting Started
+const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const h1Controls = useAnimation();
+  const h2Controls = useAnimation();
+  const imageControls = useAnimation();
+  const pControls = useAnimation();
 
-First, run the development server:
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY >= 50 && !isScrolled) {
+        setIsScrolled(true);
+        h1Controls.start({ y: 0, visibility: 'visible', opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } });
+      }
+      if (window.scrollY >= 120) {
+        h2Controls.start({ y: 0, visibility: 'visible', opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } });
+      }
+      if (window.scrollY >= 220) {
+        imageControls.start({ y: 0, visibility: 'visible', opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } });
+      }
+      if (window.scrollY >= 300) {
+        pControls.start({ y: 0, visibility: 'visible', opacity: 1, transition: { duration: 0.5, ease: "easeInOut" } });
+      }
+    };
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+    window.addEventListener('scroll', handleScroll);
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [isScrolled]);
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+  return (
+    <div className={`flex flex-col px-6 items-center bg-center md:bg-contain text-center gap-6 md:gap-16 pt-[120px] pb-10 md:pb-2 mt-6 md:mt-12 md:pt-[280px] bg-no-repeat relative`}>
+      <div className="absolute bg-[#080808ff] opacity-25 top-0 bottom-0 left-0 right-0 z-0" />
+      <motion.h1
+        initial={{ y: 420, visibility: 'hidden', opacity: 0 }}
+        animate={h1Controls}
+        className="uppercase text-4xl sm:text-5xl md:text-[72px] md:leading-[80px] font-normal z-10"
+      >
+        elevate your haircare <br />
+      </motion.h1>
+      <motion.h2
+        initial={{ y: 420, visibility: 'hidden', opacity: 0 }}
+        animate={h2Controls}
+        className="uppercase text-4xl -mt-14 sm:text-5xl md:text-[72px] md:leading-[80px] font-normal z-10"
+      >
+        routine with <span className="golden-gradient-text">golden leaves</span>
+      </motion.h2>
+      <motion.p
+        initial={{ y: 420, visibility: 'hidden', opacity: 0 }}
+        animate={pControls}
+        className="max-w-[580px] leading-6  md:leading-[36px] z-10"
+      >
+        Transform your haircare routine with golden leaves-a premium collection
+        designed to elevate your looks, combining opulence and nature's excellence for radiant, healthy strands
+      </motion.p>
+      <motion.figure
+        initial={{ y: 420, visibility: 'hidden', opacity: 0 }}
+        animate={imageControls}
+        className="flex-1 -mt-[650px]"
+      >
+          <Image src={BottleImage} alt="product" width={456} height={420} />
+      </motion.figure>
+    </div>
+  );
+};
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+export default Header; -->

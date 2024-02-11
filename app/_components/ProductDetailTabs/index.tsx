@@ -6,17 +6,17 @@ import SpecificationsTab from "./SpecificationsTab";
 import ReviewsTab from "./ReviewsTab";
 const tabs = ["Description", "Specifications", "Reviews"];
 
-const Tabs = ({ tabs }: Readonly<{ tabs: string[] }>) => {
+const Tabs = ({ tabs, data }: any) => {
   const [activeTab, setActiveTab] = useState(0);
   const tabsObj: any = {
-    0: <DescriptionTab />,
-    1: <SpecificationsTab />,
+    0: <DescriptionTab data={data}/>,
+    1: <SpecificationsTab data={data}/>,
     2: <ReviewsTab />,
   };
   return (
     <div>
       <div className="flex space-x-4 bg-[#111111] p-2">
-        {tabs.map((tab, index) => (
+        {tabs.map((tab:any, index:number) => (
           <div
             onClick={() => setActiveTab(index)}
             key={index}
@@ -35,10 +35,10 @@ const Tabs = ({ tabs }: Readonly<{ tabs: string[] }>) => {
   );
 };
 
-const ProductDetailTabs = () => {
+const ProductDetailTabs = ({data}:any) => {
   return (
     <div className="px-[100px] py-10">
-      <Tabs tabs={tabs} />
+      <Tabs tabs={tabs} data={data}/>
     </div>
   );
 };

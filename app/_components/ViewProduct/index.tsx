@@ -2,7 +2,8 @@ import Image from "next/image";
 import { BottleImage, StarIcon } from "@/public/assets";
 import { ButtonOutlined } from "..";
 
-const ViewProduct = () => {
+const ViewProduct = ({ data }: any) => {
+  const wordsArray = data.name.split(" ");
   return (
     <div className="px-[100px] py-10">
       <div className="flex items-center justify-between gap-[30px] flex-wrap">
@@ -25,9 +26,9 @@ const ViewProduct = () => {
         </div>
         <div className="flex flex-col gap-4">
           <h2 className="section-heading-44">
-            Peru golden leaves Black{""}
+            {wordsArray.slice(0, -2).join(" ")}
             <span className="golden-gradient-text font-[Glamore] block">
-              Hair Oil
+              {wordsArray?.slice(-2)?.join(" ")}
             </span>
           </h2>
           <div className="flex flex-col gap-6">
@@ -38,21 +39,10 @@ const ViewProduct = () => {
               <p className="ml-1">{5}.0 (23 Reviews)</p>
             </div>
             <p className="text-[32px] leading-[34px] text-white">
-              {"120.50"} USD
+              {data?.price} USD
             </p>
-            <div>
-              <p className="pb-6 text-lg leading-7 whitespace-break-spaces max-w-[500px]">
-                Unveil the brilliance of your hair with our Radiance Boost
-                Shampoo. Infused with real gold extracts, this sulfate-free
-                formula gently cleanses while imparting a lustrous shine
-              </p>
-              <ul className="text-[#AFAFAF] text-lg leading-7 list-disc list-inside">
-                <li>Enriched with Gold Extracts for Ultimate Shine</li>
-                <li>Sulfate-Free Formula for Gentle Cleansing</li>
-                <li>Perfect for All Hair Types</li>
-                <li>Invigorating Fragrance for a Luxurious Experience</li>
-              </ul>
-            </div>
+            <div dangerouslySetInnerHTML={{ __html: data?.short_description }}/>
+              
             <div className="flex items-center gap-4">
               <div className="flex items-center justify-between gap-4 px-5 py-3 border border-solid rounded-lg min-w-[220px]">
                 <p className="font-bold text-xl cursor-pointer">-</p>

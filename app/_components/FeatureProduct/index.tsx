@@ -5,7 +5,7 @@ import { BottleImage } from "@/public/assets";
 
 const FeatureProduct = () => {
   return (
-    <div className="flex items-center flex-col section-padding">
+    <div className="flex items-center flex-col section-padding bg-[#080808ff] z-10 relative">
       <h2 className="section-heading-60 uppercase pb-4">Feature product</h2>
       <div className="flex flex-col md:flex-row items-center gap-4 xl:gap-[40px] flex-wrap">
         <h2 className="flex-1 font-medium text-lg md:text-3xl md:leading-[46px]">
