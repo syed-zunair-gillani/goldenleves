@@ -1,6 +1,12 @@
-import { FormWrapper, Textfield } from "../_components";
+'use client'
+import { useContext, useState } from "react";
+import FormWrapper from "../_components/FormWrapper";
+import Textfield from "../_components/Textfield";
+import RadioButton from "../_components/radioButton";
+import { GlobalContext } from "@/context/globalContext";
 
 const Checkout = () => {
+  const {setButtonState} = useContext(GlobalContext)
   return (
     <div>
       <FormWrapper title="Contact Info">
@@ -56,8 +62,12 @@ const Checkout = () => {
         </div>
       </FormWrapper>
 
-      {/* <FormWrapper title="Payment Information">
+      <FormWrapper title="Payment Information">
         <div className="flex flex-col md:flex-row items-center gap-6 flex-wrap pt-6">
+          <div>
+            <RadioButton onClick={()=>setButtonState('credit-card')} value="credit-card">Credit/Debit Card</RadioButton>
+            <RadioButton onClick={()=>setButtonState('cash')} value="cash">Cash on Delivery</RadioButton>
+          </div>
           <Textfield
             name="accountTitle"
             label="Account Title"
@@ -83,7 +93,7 @@ const Checkout = () => {
             className="w-full flex-1 md:basis-[45%]"
           />
         </div>
-      </FormWrapper> */}
+      </FormWrapper>
     </div>
   );
 };

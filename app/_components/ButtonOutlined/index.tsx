@@ -1,12 +1,12 @@
 import { GoldenBorderWrapper } from "..";
 
-const ButtonOutLined = ({ children, onClick = () => {}, ...rest }: any) => {
+const ButtonOutLined = ({ children, full, onClick = () => {}, ...rest }: any) => {
   return (
-    <GoldenBorderWrapper borderRadius={8}>
+    <GoldenBorderWrapper borderRadius={8} full>
       <button
         {...rest}
         type="button"
-        className="golden-gradient-text py-3 px-[34px]"
+        className="golden-gradient-text py-3 px-[34px] text-center"
       >
         {children}
       </button>

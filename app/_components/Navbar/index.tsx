@@ -7,9 +7,11 @@ import MobileNav from "./MobileNav";
 
 const Navbar = () => {
   const [isMobNav, setIsMobNav] = useState(false);
+  
   const handleMobileNav = () => {
     setIsMobNav((prev) => !prev);
   };
+
   return (
     <>
       <div className="text-white text-sm py-[10px] xl:px-[80px] px-6 flex justify-between items-center">

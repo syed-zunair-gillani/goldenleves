@@ -49,7 +49,7 @@ const ViewProduct = ({ data }: any) => {
                 <p className="text-sm">01</p>
                 <p className="font-bold text-xl cursor-pointer">+</p>
               </div>
-              <ButtonOutlined style={{ width: "220px" }}>
+              <ButtonOutlined style={{ width: "220px" }} full>
                 Add to Cart
               </ButtonOutlined>
             </div>
