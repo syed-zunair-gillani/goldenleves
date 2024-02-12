@@ -9,7 +9,7 @@ const GoldenBorderWrapper = ({
   children: ReactNode;
   border?: number;
   borderRadius?: number;
-  full: any
+  full?: any
 }>) => {
   return (
     <div
