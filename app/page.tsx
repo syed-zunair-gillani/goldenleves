@@ -10,6 +10,7 @@ import {
 export default function Home() {
   return (
     <main>
+      
       <Header />
       <FeatureProduct />
       <OurProducts />
