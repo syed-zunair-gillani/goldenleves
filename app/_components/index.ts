@@ -13,5 +13,11 @@ export { default as OurProducts } from "./OurProducts";
 export { default as RelatedProducts } from "./RelatedProducts";
 export { default as ViewProduct } from "./ViewProduct";
 export { default as ProductDetailTabs } from "./ProductDetailTabs";
+export { default as ShopHeader } from "./ShopHeader";
+export { default as UserLove } from "./UserLove";
+export { default as Card } from "./Card";
+export { default as ShopProduct } from "./ShopProduct";
+export { default as Avatar } from "./Avatar";
+export { default as AvatarGroup } from "./AvatarGroup";
 
 export { default as Footer } from "./Footer";
