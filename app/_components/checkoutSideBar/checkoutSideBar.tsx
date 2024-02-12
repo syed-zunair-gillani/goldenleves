@@ -22,8 +22,9 @@ const CheckoutSideBar = () => {
                          {
                               [1, 2].map((item, idx) => (
                                    <div key={idx} className='flex gap-4 border-b-[.5px] border-[#AFAFAF] py-4'>
-                                        <figure className='bg-[#070707] p-2 rounded-lg w-[100px] flex items-center justify-center'>
+                                        <figure className='bg-[#070707] p-2 relative rounded-lg w-[100px] flex items-center justify-center'>
                                              <Image src={BottleImage} alt="BottleImage" width={50} height={50} />
+                                             <div className='bg-white absolute flex items-center justify-center -top-2 -right-2 w-5 h-5 rounded-full text-[12px]'>2</div>
                                         </figure>
                                         <div>
                                              <div className='flex justify-between gap-4'>

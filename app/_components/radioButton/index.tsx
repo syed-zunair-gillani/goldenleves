@@ -1,6 +1,5 @@
 'use client'
 import { useContext } from "react";
-import { GoldenBorderWrapper } from "..";
 import { GlobalContext } from "@/context/globalContext";
 
 const RadioButton = ({ children, value, onClick = () => { }, ...rest }: any) => {
@@ -9,10 +8,10 @@ const RadioButton = ({ children, value, onClick = () => { }, ...rest }: any) => 
   var isActive = value === buttonState
   return (
     <div
-      className={`inline-block  h-fit rounded-lg p-[1px]
+      className={`inline-block w-full h-fit rounded-lg p-[1px] 
       ${isActive ? ' golden-gradient-bg' : 'bg-[#A1A1A1]'}`}
     >
-      <div className={`bg-[#111111] shadow-md overflow-hidden rounded-lg`} >
+      <div className={`bg-[#111111] shadow-md overflow-hidden rounded-lg `} >
         <button
           {...rest}
           type="button"
