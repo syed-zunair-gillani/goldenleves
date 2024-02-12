@@ -19,5 +19,8 @@ export { default as Card } from "./Card";
 export { default as ShopProduct } from "./ShopProduct";
 export { default as Avatar } from "./Avatar";
 export { default as AvatarGroup } from "./AvatarGroup";
+export { default as LabeledAvatarGroup } from "./LabeledAvatarGroup";
+export { default as ButtonContained } from "./ButtonOutlined copy";
+export { default as GoldenLeavesCard } from "./GoldenLeavesCard";
 
 export { default as Footer } from "./Footer";

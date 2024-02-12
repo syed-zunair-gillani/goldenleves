@@ -14,7 +14,15 @@ export default function Home() {
       <FeatureProduct />
       <OurProducts />
       <DetailProduct />
-      <BrandIdentity />
+      <BrandIdentity
+        title={
+          <h2 className="section-heading-60 ">
+            Our{" "}
+            <span className="golden-gradient-text font-[Glamore]">Brand</span>{" "}
+            Identity
+          </h2>
+        }
+      />
       <DisplayProduct />
     </main>
   );

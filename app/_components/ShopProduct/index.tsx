@@ -1,26 +1,59 @@
-import Image from "next/image";
-import { Avatar, AvatarGroup, ButtonOutlined } from "..";
-import { Product2Image } from "@/public/assets";
+import Image, { StaticImageData } from "next/image";
+import { ButtonContained, ButtonOutlined, LabeledAvatarGroup } from "..";
 
-const ShopProduct = ({ direction = "row" }: { direction?: string }) => {
+interface IShopProduct {
+  direction?: string;
+  title: string;
+  text: string;
+  productImage: string | StaticImageData;
+  avatarData: {
+    label: string;
+    caption?: string;
+    list: {
+      src: string | StaticImageData;
+      alt?: string;
+    }[];
+  };
+}
+
+const ShopProduct = (props: IShopProduct) => {
+  const {
+    title,
+    text,
+    direction = "flex-row",
+    avatarData,
+    productImage,
+  } = props;
   return (
     <div
-      className={`flex items-center section-padding bg-[#111] gap-4 xl:gap-[185px]`}
+      className={`${direction} flex items-center xl:gap-[80px] bg-[#111] gap-4 rounded-2xl px-[60px] m-[80px] section-margin`}
     >
-      <div className="w-full lg:w-auto">
-        <h2 className="section-heading-60 uppercase font-normal golden-gradient-text">
-          Unlocking Beauty with Exquisite
+      <div className="md:pb-10 md:pt-7 lg:pt-10 lg:pb-14 basis-full xl:basis-[55%]">
+        <h2 className="section-heading-44 uppercase font-normal golden-gradient-text">
+          {title}
         </h2>
-        <p className="pb-10">
-          Experience a new level of radiance through
-          <br /> carefully curated formulations.
-        </p>
-        <Avatar src={Product2Image} width={32} height={32} />
-        <AvatarGroup />
-        <ButtonOutlined onClick={() => {}}>Shop Now</ButtonOutlined>
+        <p className="pb-6 pt-4">{text}</p>
+        <LabeledAvatarGroup
+          width={34}
+          list={avatarData?.list}
+          label={avatarData?.label}
+          caption={avatarData?.caption}
+        />
+        <div className="flex items-center gap-8 pt-8">
+          <ButtonContained onClick={() => {}}>Buy Now!</ButtonContained>
+          <ButtonOutlined onClick={() => {}}>Shop Now</ButtonOutlined>
+        </div>
       </div>
-      <div className="">
-        <Image src={Product2Image} alt="product" width={456} height={420} />
+      <div className="flex items-center justify-center w-full h-full basis-full xl:basis-[40%]">
+        <div className="scale-[1.25]">
+          <Image
+            src={productImage}
+            alt="product"
+            width={456}
+            height={420}
+            className="w-full h-full object-fill overflow-hidden"
+          />
+        </div>
       </div>
     </div>
   );
