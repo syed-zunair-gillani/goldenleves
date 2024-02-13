@@ -6,6 +6,7 @@ const Avatar = ({
   height,
   alt,
   name,
+  className,
   ...rest
 }: {
   src: string | StaticImageData;
@@ -13,6 +14,7 @@ const Avatar = ({
   height: number;
   name?: string;
   alt?: string;
+  className?: any;
   rest?: any;
 }) => {
   return (
@@ -24,13 +26,14 @@ const Avatar = ({
         background: "grey",
         position: "relative",
       }}
+      className={className}
       {...rest}
     >
       <Image
         src={src}
         width={width}
         height={height}
-        alt={alt}
+        alt={alt || 'altText'}
         className="absolute overflow-hidden rounded-[50%] object-cover w-full h-full"
       />
     </div>
