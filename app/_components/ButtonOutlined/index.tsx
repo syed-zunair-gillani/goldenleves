@@ -1,8 +1,13 @@
 import { GoldenBorderWrapper } from "..";
 
-const ButtonOutLined = ({ children, onClick = () => {}, ...rest }: any) => {
+const ButtonOutLined = ({
+  children,
+  full,
+  onClick = () => {},
+  ...rest
+}: any) => {
   return (
-    <GoldenBorderWrapper borderRadius={8}>
+    <GoldenBorderWrapper borderRadius={8} full>
       <button
         {...rest}
         type="button"
