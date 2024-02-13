@@ -9,7 +9,7 @@ const Checkout = () => {
   const { setButtonState } = useContext(GlobalContext);
   return (
     <div className="section-margin flex gap-4 xl:gap-10">
-      <div className="w-full flex flex-col gap-8">
+      <div className="w-full flex flex-col gap-6">
         <FormWrapper title="Contact Info">
           <div className="flex flex-col md:flex-row items-center gap-6 flex-wrap pt-6">
             <Textfield
