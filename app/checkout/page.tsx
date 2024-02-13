@@ -3,6 +3,7 @@ import { ButtonContained, FormWrapper, Textfield } from "../_components";
 import { useContext, useState } from "react";
 import RadioButton from "../_components/radioButton";
 import { GlobalContext } from "@/context/globalContext";
+import OrderSummary from "./orderSummary";
 
 const Checkout = () => {
   const { setButtonState } = useContext(GlobalContext);
@@ -134,6 +135,7 @@ const Checkout = () => {
           <p className="font-bold text-[#080808]">Complete Order</p>
         </ButtonContained>
       </div>
+      <OrderSummary />
     </div>
   );
 };
