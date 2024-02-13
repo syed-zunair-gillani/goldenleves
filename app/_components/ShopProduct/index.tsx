@@ -37,6 +37,7 @@ const ShopProduct = (props: IShopProduct) => {
             initial={{ height: `100%` }}
             whileInView={{ height: '0px' }}
             transition={{ duration: 2, delay: 0.4 }}
+            viewport={{ once: true }}
             className={`absolute bg-[#111111] inset-0`}></motion.span>
         </h2>
         <p className="pb-6 pt-4 relative">
@@ -45,6 +46,7 @@ const ShopProduct = (props: IShopProduct) => {
             initial={{ height: `100%` }}
             whileInView={{ height: '0px' }}
             transition={{ duration: 2, delay: 0.5 }}
+            viewport={{ once: true }}
             className={`absolute bg-[#111111] inset-0`}></motion.span>
         </p>
         <LabeledAvatarGroup
@@ -60,6 +62,7 @@ const ShopProduct = (props: IShopProduct) => {
             initial={{ height: `100%` }}
             whileInView={{ height: '0px' }}
             transition={{ duration: 2, delay: 0.7 }}
+            viewport={{ once: true }}
             className={`absolute bg-[#111111] inset-0`}></motion.span>
         </div>
       </div>

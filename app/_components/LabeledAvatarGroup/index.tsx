@@ -27,6 +27,7 @@ const LabeledAvatarGroup = (props: ILabeledAvatarGroup) => {
             initial={{ height: `100%` }}
             whileInView={{ height: '0px' }}
             transition={{ duration: 2, delay: 0.6 }}
+            viewport={{ once: true }}
             className={`absolute bg-[#111111] inset-0`}></motion.span>
     </div>
   );
