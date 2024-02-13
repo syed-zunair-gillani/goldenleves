@@ -1,5 +1,5 @@
+"use client";
 import { ButtonContained, FormWrapper, Textfield } from "../_components";
-("use client");
 import { useContext, useState } from "react";
 import RadioButton from "../_components/radioButton";
 import { GlobalContext } from "@/context/globalContext";
@@ -90,47 +90,50 @@ const Checkout = () => {
             />
           </div>
         </FormWrapper>
-        <ButtonContained>Check Out</ButtonContained>
-      </div>
-      <FormWrapper title="Payment Information">
-        <div className="flex flex-col md:flex-row items-center gap-6 flex-wrap pt-6">
-          <div>
-            <RadioButton
-              onClick={() => setButtonState("credit-card")}
-              value="credit-card"
-            >
-              Credit/Debit Card
-            </RadioButton>
-            <RadioButton onClick={() => setButtonState("cash")} value="cash">
-              Cash on Delivery
-            </RadioButton>
+
+        <FormWrapper title="Payment Information">
+          <div className="flex flex-col md:flex-row items-center gap-6 flex-wrap pt-6">
+            <div className="basis-full flex flex-col md:flex-row items-center gap-6 flex-wrap">
+              <RadioButton
+                onClick={() => setButtonState("credit-card")}
+                value="credit-card"
+              >
+                Credit/Debit Card
+              </RadioButton>
+              <RadioButton onClick={() => setButtonState("cash")} value="cash">
+                Cash on Delivery
+              </RadioButton>
+            </div>
+            <Textfield
+              name="accountTitle"
+              label="Account Title"
+              placeholder="Enter title"
+              className="w-full flex-1 md:basis-[45%]"
+            />
+            <Textfield
+              name="cardNumber"
+              label="Card Number"
+              placeholder="Enter card number"
+              className="w-full flex-1 md:basis-[45%]"
+            />
+            <Textfield
+              name="expiryDate"
+              label="Expiry Date"
+              placeholder="Enter expiry date"
+              className="w-full flex-1 md:basis-[45%]"
+            />
+            <Textfield
+              name="CVVCode"
+              label="CVV Code"
+              placeholder="Enter Code"
+              className="w-full flex-1 md:basis-[45%]"
+            />
           </div>
-          <Textfield
-            name="accountTitle"
-            label="Account Title"
-            placeholder="Enter title"
-            className="w-full flex-1 md:basis-[45%]"
-          />
-          <Textfield
-            name="cardNumber"
-            label="Card Number"
-            placeholder="Enter card number"
-            className="w-full flex-1 md:basis-[45%]"
-          />
-          <Textfield
-            name="expiryDate"
-            label="Expiry Date"
-            placeholder="Enter expiry date"
-            className="w-full flex-1 md:basis-[45%]"
-          />
-          <Textfield
-            name="CVVCode"
-            label="CVV Code"
-            placeholder="Enter Code"
-            className="w-full flex-1 md:basis-[45%]"
-          />
-        </div>
-      </FormWrapper>
+        </FormWrapper>
+        <ButtonContained>
+          <p className="font-bold text-[#080808]">Complete Order</p>
+        </ButtonContained>
+      </div>
     </div>
   );
 };
