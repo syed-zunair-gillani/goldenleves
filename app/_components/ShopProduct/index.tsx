@@ -2,6 +2,7 @@
 import Image, { StaticImageData } from "next/image";
 import { ButtonContained, ButtonOutlined, LabeledAvatarGroup } from "..";
 import { motion } from 'framer-motion';
+import { useRouter } from "next/navigation";
 
 interface IShopProduct {
   direction?: string;
@@ -26,6 +27,7 @@ const ShopProduct = (props: IShopProduct) => {
     avatarData,
     productImage,
   } = props;
+  const router = useRouter()
   return (
     <div
       className={` flex items-center flex-col-reverse lg:flex-row gap-10 xl:gap-[80px] bg-[#111] rounded-2xl px-8 lg:px-[60px] m-[80px] section-margin pb-8 lg:pb-0 ${direction === "reverse" ? 'lg:!flex-row-reverse' : 'flex-col'}`}
@@ -56,8 +58,8 @@ const ShopProduct = (props: IShopProduct) => {
           caption={avatarData?.caption}
         />
         <div className="flex relative items-center flex-col md:flex-row gap-8 pt-8 xl:w-[70%]">
-          <ButtonContained onClick={() => { }}>Buy Now!</ButtonContained>
-          <ButtonOutlined onClick={() => { }}>Shop Now</ButtonOutlined>
+          <ButtonContained onClick={() => { router.push('/shop/slug') }}>Buy Now!</ButtonContained>
+          <ButtonOutlined onClick={() => { router.push('/shop/slug') }}>Shop Now</ButtonOutlined>
           <motion.span
             initial={{ height: `100%` }}
             whileInView={{ height: '0px' }}
