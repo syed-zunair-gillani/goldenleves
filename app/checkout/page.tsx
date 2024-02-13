@@ -1,6 +1,6 @@
 "use client";
 import { ButtonContained, FormWrapper, Textfield } from "../_components";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import RadioButton from "../_components/radioButton";
 import { GlobalContext } from "@/context/globalContext";
 import OrderSummary from "./orderSummary";
@@ -8,8 +8,8 @@ import OrderSummary from "./orderSummary";
 const Checkout = () => {
   const { setButtonState } = useContext(GlobalContext);
   return (
-    <div className="flex">
-      <div className="w-full section-margin flex flex-col gap-8">
+    <div className="section-margin flex gap-4 xl:gap-10">
+      <div className="w-full flex flex-col gap-8">
         <FormWrapper title="Contact Info">
           <div className="flex flex-col md:flex-row items-center gap-6 flex-wrap pt-6">
             <Textfield
@@ -65,35 +65,6 @@ const Checkout = () => {
 
         <FormWrapper title="Payment Information">
           <div className="flex flex-col md:flex-row items-center gap-6 flex-wrap pt-6">
-            <Textfield
-              name="accountTitle"
-              label="Account Title"
-              placeholder="Enter title"
-              className="w-full flex-1 md:basis-[45%]"
-            />
-            <Textfield
-              name="cardNumber"
-              label="Card Number"
-              placeholder="Enter card number"
-              className="w-full flex-1 md:basis-[45%]"
-            />
-            <Textfield
-              name="expiryDate"
-              label="Expiry Date"
-              placeholder="Enter expiry date"
-              className="w-full flex-1 md:basis-[45%]"
-            />
-            <Textfield
-              name="CVVCode"
-              label="CVV Code"
-              placeholder="Enter Code"
-              className="w-full flex-1 md:basis-[45%]"
-            />
-          </div>
-        </FormWrapper>
-
-        <FormWrapper title="Payment Information">
-          <div className="flex flex-col md:flex-row items-center gap-6 flex-wrap pt-6">
             <div className="basis-full flex flex-col md:flex-row items-center gap-6 flex-wrap">
               <RadioButton
                 onClick={() => setButtonState("credit-card")}
@@ -135,7 +106,9 @@ const Checkout = () => {
           <p className="font-bold text-[#080808]">Complete Order</p>
         </ButtonContained>
       </div>
-      <OrderSummary />
+      <div>
+        <OrderSummary />
+      </div>
     </div>
   );
 };
