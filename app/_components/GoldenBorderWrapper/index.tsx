@@ -4,17 +4,17 @@ const GoldenBorderWrapper = ({
   border = 1,
   borderRadius = 12,
   children,
-  full
+  full,
 }: Readonly<{
   children: ReactNode;
   border?: number;
   borderRadius?: number;
-  full?: any
+  full?: any;
 }>) => {
   return (
     <div
       style={{ borderRadius }}
-      className={`inline-block golden-gradient-bg h-fit ${full && 'w-full'}`}
+      className={`inline-block golden-gradient-bg h-fit ${full && "w-full"}`}
     >
       <div
         style={{ borderRadius, margin: border }}

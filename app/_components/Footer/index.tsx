@@ -23,7 +23,7 @@ const Footer = () => {
         </div>
 
         {/* Support Section */}
-        <div className="flex flex-col gap-3 md:gap-6 flex-1">
+        <div className="flex flex-col gap-3 md:gap-6 flex-1 min-w-[150px]">
           <p className="text-lg text-white font-semibold">Support</p>
           <ul className="text-sm leading-[26px] flex flex-col gap-3 md:gap-6">
             <li>
@@ -45,7 +45,7 @@ const Footer = () => {
         </div>
 
         {/* About Section */}
-        <div className="flex flex-col gap-3 md:gap-6 flex-1">
+        <div className="flex flex-col gap-3 md:gap-6 flex-1 min-w-[150px]">
           <p className="text-lg text-white font-semibold">About</p>
           <ul className="text-sm leading-[26px] flex flex-col gap-3 md:gap-6">
             <li>
@@ -69,7 +69,7 @@ const Footer = () => {
         </div>
 
         {/* Legal Section */}
-        <div className="flex flex-col gap-3 md:gap-6 flex-1">
+        <div className="flex flex-col gap-3 md:gap-6 flex-1 min-w-[150px]">
           <p className="text-lg text-white font-semibold">Legal</p>
           <ul className="text-sm leading-[26px] flex flex-col gap-3 md:gap-6">
             <li>

@@ -1,18 +1,33 @@
 import { Avatar } from "..";
-import { Product2Image } from "@/public/assets";
+import { StaticImageData } from "next/image";
 
-const AvatarGroup = ({ width = 32, height }) => {
-  const arr = ["", "", "", ""];
+interface IAvatarGroup {
+  width: number;
+  height?: number;
+  list: {
+    src: string | StaticImageData;
+    alt?: string;
+  }[];
+}
+
+const AvatarGroup = (props: IAvatarGroup) => {
+  const { width = 32, list = [], height } = props;
   return (
     <div className="flex items-center ">
-      {arr?.map((_, index) => (
-        <div style={{ width: `${width}px`, marginLeft: `-${width / 2}px` }}>
+      {list?.map(({ src, alt = "image" }, index) => (
+        <div
+          style={{
+            width: `${width}px`,
+            marginLeft: index === 0 ? 0 : `-${width / 1.75}px`,
+          }}
+        >
           <Avatar
-            src={Product2Image}
+            src={src}
+            alt={alt}
             width={width}
             height={height ?? width}
             className={`${
-              !(index === 0 || index === arr?.length - 1) && "border-2"
+              !(index === 0 || index === list?.length - 1) && "border-2"
             } border-solid border-[#080808ff]`}
           />
         </div>

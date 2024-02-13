@@ -4,6 +4,7 @@ const Avatar = ({
   src,
   width,
   height,
+  alt,
   name,
   ...rest
 }: {
@@ -11,6 +12,7 @@ const Avatar = ({
   width: number;
   height: number;
   name?: string;
+  alt?: string;
   rest?: any;
 }) => {
   return (
@@ -28,7 +30,7 @@ const Avatar = ({
         src={src}
         width={width}
         height={height}
-        alt={name}
+        alt={alt}
         className="absolute overflow-hidden rounded-[50%] object-cover w-full h-full"
       />
     </div>

@@ -48,6 +48,11 @@ h1 {
 .section-padding {
   padding: 100px 80px;
 }
+
+.section-margin {
+  margin: 100px 80px;
+}
+
 .section-heading-44 {
   font-size: 44px;
   line-height: 70px;
@@ -62,6 +67,11 @@ h1 {
   .section-padding {
     padding: 30px 24px;
   }
+
+  .section-margin {
+    margin: 30px 24px;
+  }
+
   .section-heading-44 {
     font-size: 22px;
     line-height: 30px;
