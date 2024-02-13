@@ -6,7 +6,7 @@ export const GlobalContext = createContext();
 
 const GlobalProvider = ({ children }) => {
   const [cartOpen, setCartOpen] = useState(false);
-  const [buttonState, setButtonState] = useState('')
+  const [buttonState, setButtonState] = useState('cash')
   console.log("🚀 ~ GlobalProvider ~ buttonState:", buttonState)
 
   return (

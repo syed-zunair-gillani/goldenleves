@@ -4,11 +4,13 @@ import FormWrapper from "../_components/FormWrapper";
 import Textfield from "../_components/Textfield";
 import RadioButton from "../_components/radioButton";
 import { GlobalContext } from "@/context/globalContext";
+import OrderSummary from "./orderSummary";
 
 const Checkout = () => {
   const {setButtonState} = useContext(GlobalContext)
   return (
-    <div>
+    <section className="flex gap-8 lg:container mx-auto px-4 items-start my-20">
+    <div className="flex-1">
       <FormWrapper title="Contact Info">
         <div className="flex flex-col md:flex-row items-center gap-6 flex-wrap pt-6">
           <Textfield
@@ -64,7 +66,7 @@ const Checkout = () => {
 
       <FormWrapper title="Payment Information">
         <div className="flex flex-col md:flex-row items-center gap-6 flex-wrap pt-6">
-          <div>
+          <div className="flex gap-6 w-full">
             <RadioButton onClick={()=>setButtonState('credit-card')} value="credit-card">Credit/Debit Card</RadioButton>
             <RadioButton onClick={()=>setButtonState('cash')} value="cash">Cash on Delivery</RadioButton>
           </div>
@@ -94,7 +96,12 @@ const Checkout = () => {
           />
         </div>
       </FormWrapper>
+      <button className="golden-gradient-bg capitalize w-full rounded-[8px] px-5 py-[10px]">
+        order Complete
+      </button>
     </div>
+    <OrderSummary/>
+    </section>
   );
 };
 
