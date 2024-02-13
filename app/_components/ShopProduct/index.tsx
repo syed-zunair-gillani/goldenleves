@@ -39,7 +39,7 @@ const ShopProduct = (props: IShopProduct) => {
           label={avatarData?.label}
           caption={avatarData?.caption}
         />
-        <div className="flex items-center flex-col md:flex-row gap-8 pt-8">
+        <div className="flex items-center flex-col md:flex-row gap-8 pt-8 xl:w-[70%]">
           <ButtonContained onClick={() => {}}>Buy Now!</ButtonContained>
           <ButtonOutlined onClick={() => {}}>Shop Now</ButtonOutlined>
         </div>
