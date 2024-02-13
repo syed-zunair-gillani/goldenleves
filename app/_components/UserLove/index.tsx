@@ -1,13 +1,18 @@
 import { Card } from "..";
+import RevelText from "../animations/revelText";
 import { cardData } from "./UserLove.data";
 
 const UserLove = () => {
   return (
-    <div className="flex items-center flex-col section-padding mt-20 md:mt-0">
+    <div className="flex items-center px-4 lg:px-0 lg:container mx-auto flex-col section-padding mt-20 md:mt-0">
       <div>
-        <h2 className="section-heading-44 uppercase">Why User Loves Us</h2>
-        <p className="">
+        <h2 className="section-heading-44 relative text-center uppercase">
+          Why User Loves Us
+          <RevelText/>
+        </h2>
+        <p className="text-center relative">
           Experience leadership that propels us toward Unparalleled success.
+          <RevelText delay='1.1'/>
         </p>
       </div>
       <div className="flex items-center gap-4 xl:gap-[35px] pt-9 pb-9">

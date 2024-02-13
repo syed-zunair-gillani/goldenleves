@@ -29,7 +29,7 @@ const Shop = async () => {
       <ShopHeader />
       <UserLove />
       <ShopProduct
-        direction="flex-row-reverse"
+        direction="reverse"
         title="Radiant Gold shampoo"
         text="Experience the luxury of Silk Elixir Conditioner, providing deep
           hydration, effortless detangling, and a captivating fragrance. Revel
