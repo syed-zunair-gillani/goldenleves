@@ -8,8 +8,8 @@ import OrderSummary from "./orderSummary";
 const Checkout = () => {
   const { setButtonState } = useContext(GlobalContext);
   return (
-    <div className="section-margin flex gap-4 xl:gap-10">
-      <div className="w-full flex flex-col gap-6">
+    <div className="section-margin flex flex-col lg:flex-row gap-4 xl:gap-10">
+      <div className="w-full flex flex-col gap-6 basis-full lg:basis-[70%]">
         <FormWrapper title="Contact Info">
           <div className="flex flex-col md:flex-row items-center gap-6 flex-wrap pt-6">
             <Textfield
@@ -106,7 +106,7 @@ const Checkout = () => {
           <p className="font-bold text-[#080808]">Complete Order</p>
         </ButtonContained>
       </div>
-      <div>
+      <div className="basis-full lg:basis-[30%]">
         <OrderSummary />
       </div>
     </div>
