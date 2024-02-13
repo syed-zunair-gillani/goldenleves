@@ -1,4 +1,5 @@
 import { ReactNode } from "react";
+
 const BrandIdentity = ({ title }: { title: string | ReactNode }) => {
   return (
     <div className="section-padding relative rounded-3xl overflow-hidden">
@@ -10,7 +11,16 @@ const BrandIdentity = ({ title }: { title: string | ReactNode }) => {
       >
         {title}
       </div>
-      <div className="w-full h-[646px] bg-[red] rounded-3xl overflow-hidden"></div>
+      <div className="w-full h-[646px] bg-[red] rounded-3xl overflow-hidden">
+        <iframe
+          width="100%"
+          height="100%"
+          src="https://www.youtube.com/embed/YOUR_VIDEO_ID"
+          title="YouTube Video"
+          allowFullScreen
+          style={{ borderRadius: "12px", height: "100%" }}
+        ></iframe>
+      </div>
     </div>
   );
 };

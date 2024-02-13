@@ -26,7 +26,7 @@ const ShopProduct = (props: IShopProduct) => {
   } = props;
   return (
     <div
-      className={`${direction} flex items-center xl:gap-[80px] bg-[#111] gap-4 rounded-2xl px-[60px] m-[80px] section-margin`}
+      className={`${direction} flex items-center flex-col-reverse lg:flex-row gap-10  xl:gap-[80px] bg-[#111] rounded-2xl px-8 lg:px-[60px] m-[80px] section-margin pb-8 lg:pb-0`}
     >
       <div className="md:pb-10 md:pt-7 lg:pt-10 lg:pb-14 basis-full xl:basis-[55%]">
         <h2 className="section-heading-44 uppercase font-normal golden-gradient-text">
@@ -39,7 +39,7 @@ const ShopProduct = (props: IShopProduct) => {
           label={avatarData?.label}
           caption={avatarData?.caption}
         />
-        <div className="flex items-center gap-8 pt-8">
+        <div className="flex items-center flex-col md:flex-row gap-8 pt-8">
           <ButtonContained onClick={() => {}}>Buy Now!</ButtonContained>
           <ButtonOutlined onClick={() => {}}>Shop Now</ButtonOutlined>
         </div>

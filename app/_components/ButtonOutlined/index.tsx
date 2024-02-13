@@ -6,7 +6,7 @@ const ButtonOutLined = ({ children, onClick = () => {}, ...rest }: any) => {
       <button
         {...rest}
         type="button"
-        className="golden-gradient-text py-3 px-[34px]"
+        className="w-full golden-gradient-text py-3 px-[34px]"
       >
         {children}
       </button>

@@ -12,7 +12,7 @@ const GoldenBorderWrapper = ({
   return (
     <div
       style={{ borderRadius }}
-      className={`inline-block golden-gradient-bg h-fit`}
+      className={`w-full inline-block golden-gradient-bg h-fit`}
     >
       <div
         style={{ borderRadius, margin: border }}
