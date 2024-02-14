@@ -24,5 +24,6 @@ export { default as ButtonContained } from "./ButtonOutlined copy";
 export { default as GoldenLeavesCard } from "./GoldenLeavesCard";
 export { default as Textfield } from "./Textfield";
 export { default as FormWrapper } from "./FormWrapper";
+export { default as EffectCardSlider } from "./EffectCardSlider";
 
 export { default as Footer } from "./Footer";
