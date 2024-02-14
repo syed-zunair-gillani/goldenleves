@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 const BrandIdentity = ({ title }: { title: string | ReactNode }) => {
   return (
-    <div className="section-padding relative rounded-3xl overflow-hidden">
+    <div className="section-padding relative rounded-2xl overflow-hidden">
       <div
         style={{
           clipPath: "polygon(0% 0%, 100% 0, 100% 0, 80% 100%, 0% 100%)",
@@ -11,7 +11,7 @@ const BrandIdentity = ({ title }: { title: string | ReactNode }) => {
       >
         {title}
       </div>
-      <div className="w-full h-[646px] bg-[red] rounded-3xl overflow-hidden">
+      <div className="w-full h-[646px] rounded-2xl overflow-hidden">
         <iframe
           width="100%"
           height="100%"

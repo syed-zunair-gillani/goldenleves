@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import { ButtonOutlined } from "..";
 import { Product2Image } from "@/public/assets";
@@ -18,7 +19,15 @@ const DisplayProduct = () => {
           Experience a new level of radiance through
           <br /> carefully curated formulations.
         </p>
-        <ButtonOutlined onClick={() => {}}>Shop Now</ButtonOutlined>
+        <div className="max-w-[156px]">
+          <ButtonOutlined
+            onClick={() => {
+              alert("clicked");
+            }}
+          >
+            Shop Now
+          </ButtonOutlined>
+        </div>
       </div>
       <div className="">
         <Image src={Product2Image} alt="product" width={456} height={420} />
