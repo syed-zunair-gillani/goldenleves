@@ -18,7 +18,7 @@ const DisplayProduct = () => {
           Experience a new level of radiance through
           <br /> carefully curated formulations.
         </p>
-        <ButtonOutlined onClick={() => {}}>Shop Now</ButtonOutlined>
+        <ButtonOutlined>Shop Now</ButtonOutlined>
       </div>
       <div className="">
         <Image src={Product2Image} alt="product" width={456} height={420} />
