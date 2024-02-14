@@ -1,3 +1,4 @@
+"use clint";
 import { GoldenBorderWrapper } from "..";
 
 const ButtonOutLined = ({

@@ -1,3 +1,4 @@
+"use client";
 const ButtonContained = ({ children, onClick = () => {}, ...rest }: any) => {
   return (
     <button
