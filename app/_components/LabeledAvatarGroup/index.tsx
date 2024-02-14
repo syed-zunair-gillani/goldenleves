@@ -1,5 +1,7 @@
+'use client'
 import { AvatarGroup } from "..";
 import { StaticImageData } from "next/image";
+import { motion } from 'framer-motion';
 
 interface ILabeledAvatarGroup {
   width: number;
@@ -15,10 +17,18 @@ interface ILabeledAvatarGroup {
 const LabeledAvatarGroup = (props: ILabeledAvatarGroup) => {
   const { width, height, label, list, caption } = props;
   return (
-    <div className="flex items-center gap-2">
+    <div 
+    className="relative flex items-center gap-2"
+    >
       <AvatarGroup width={width} height={height} list={list} />
       {label && <p className="text-xl font-semibold">{label}</p>}
       {caption && <p className="text-xs">{caption}</p>}
+      <motion.span
+            initial={{ height: `100%` }}
+            whileInView={{ height: '0px' }}
+            transition={{ duration: 2, delay: 0.6 }}
+            viewport={{ once: true }}
+            className={`absolute bg-[#111111] inset-0`}></motion.span>
     </div>
   );
 };
