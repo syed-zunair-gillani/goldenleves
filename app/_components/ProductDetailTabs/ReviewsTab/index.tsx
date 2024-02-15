@@ -15,7 +15,9 @@ const ReviewsTab = () => {
           ))}
           <p className="ml-1">23 Reviews</p>
         </div>
-        <ButtonOutlined>Write Review</ButtonOutlined>
+        <div>
+          <ButtonOutlined>Write Review</ButtonOutlined>
+        </div>
       </div>
     </div>
   );

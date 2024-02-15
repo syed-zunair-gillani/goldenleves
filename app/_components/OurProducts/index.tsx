@@ -1,5 +1,10 @@
 import { EffectCardSlider } from "..";
-import { BottleImage } from "@/public/assets";
+import {
+  BottleImage,
+  BottlesImage,
+  Drop1Image,
+  Drop2Image,
+} from "@/public/assets";
 
 const OurProducts = () => {
   const slides = [
@@ -10,24 +15,24 @@ const OurProducts = () => {
     },
     {
       title: "Silk Elegence condtioner",
-      image: BottleImage,
-      price: 120.25,
+      image: Drop1Image,
+      price: 125.25,
     },
     {
       title: "Silk Elegence condtioner",
-      image: BottleImage,
-      price: 120.25,
+      image: Drop2Image,
+      price: 130.25,
     },
     {
       title: "Silk Elegence condtioner",
-      image: BottleImage,
-      price: 120.25,
+      image: BottlesImage,
+      price: 135.25,
     },
   ];
 
   return (
     <div className="flex items-center flex-col section-padding">
-      <h2 className="section-heading-60 uppercase pb-4">Our product</h2>
+      <h2 className="section-heading-60 uppercase -mb-[20px]">Our product</h2>
       <div className="w-full flex justify-center items-center">
         <EffectCardSlider slides={slides} />
       </div>

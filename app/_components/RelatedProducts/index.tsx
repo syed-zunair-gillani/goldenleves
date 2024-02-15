@@ -1,3 +1,4 @@
+"use client";
 import { ButtonOutlined } from "..";
 import Card from "./Card";
 import { BottleImage } from "@/public/assets";
@@ -10,9 +11,9 @@ const RelatedProducts = () => {
           Related{" "}
           <span className="font-[Glamore] golden-gradient-text">product</span>
         </h2>
-        <ButtonOutlined onClick={() => {}} style={{ padding: "0.75rem 4rem" }}>
-          View All
-        </ButtonOutlined>
+        <div className="w-[174px]">
+          <ButtonOutlined onClick={() => {}}>View All</ButtonOutlined>
+        </div>
       </div>
       <div className="flex items-center justify-between gap-[30px] flex-wrap">
         {new Array(4).fill("")?.map(() => (

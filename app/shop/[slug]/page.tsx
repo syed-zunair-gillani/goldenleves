@@ -6,28 +6,29 @@ import {
 } from "../../_components";
 import api from "@/config/api";
 
-async function getData(slug:any) {
+async function getData(slug: any) {
   const dataForProducts = {
     slug,
   };
 
-  const { data } = await api.get('products', dataForProducts);
+  const { data } = await api.get("products", dataForProducts);
   if (!data) {
-		return notFound()
-	}
-  return {
-    products: data[0]
+    return notFound();
   }
+  return {
+    products: data[0],
+  };
 }
 
-const SingleProduct = async (props:any) => {
-  const { products } = await getData(props?.params?.slug)
+const SingleProduct = async (props: any) => {
+  // const { products } = await getData(props?.params?.slug);
+  const { products } = { products: {} };
 
   return (
     <div>
-      <pre className="text-gray-400">{JSON.stringify(products, null, 2)}</pre>
-      <ViewProduct data={products}/>
-      <ProductDetailTabs data={products}/>
+      {/* <pre className="text-gray-400">{JSON.stringify(products, null, 2)}</pre> */}
+      <ViewProduct data={products} />
+      <ProductDetailTabs data={products} />
       <RelatedProducts />
     </div>
   );
