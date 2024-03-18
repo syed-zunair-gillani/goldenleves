@@ -17,6 +17,8 @@ export { default as VisaIcon } from "./icons/visa-icon.png";
 export { default as StarIcon } from "./icons/StarIcon.svg";
 export { default as MenuIcon } from "./icons/menu.png";
 export { default as ArrowRightIcon } from "./icons/right-arrow.png";
+export { default as LeftNavigationIcon } from "./icons/left-navigation-icon.svg";
+export { default as RightNavigationIcon } from "./icons/right-navigation-icon.svg";
 
 // images
 export { default as BottleImage } from "./images/bottle.png";

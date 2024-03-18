@@ -1,10 +1,12 @@
 "use client";
+import {
+  BottleImage,
+  LeftNavigationIcon,
+  RightNavigationIcon,
+} from "@/public/assets";
+import Image from "next/image";
 import React, { useState } from "react";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import {
-//   faChevronRight,
-//   faChevronLeft
-// } from "@fortawesome/free-solid-svg-icons";
+import { ProductCard } from "..";
 
 export default (props: any) => {
   const [activeSlide, setactiveSlide] = useState(props.activeSlide);
@@ -60,40 +62,53 @@ export default (props: any) => {
   };
 
   return (
-    <>
-      {/* carousel */}
-      <div className="slideC">
-        {props.data.map((item: any, i: number) => (
-          <React.Fragment key={item.id}>
-            <div
-              className="slide"
-              style={{
-                background: item.bgColor,
-                boxShadow: `0 5px 20px ${item.bgColor}30`,
-                ...getStyles(i),
-              }}
-            >
-              <SliderContent {...item} />
-            </div>
-          </React.Fragment>
-        ))}
-      </div>
-      {/* carousel */}
+    <div className="min-h-[742px] flex justify-center relative pt-4">
+      <div>
+        <div className="slideC">
+          {props.data.map((item: any, i: number) => (
+            <React.Fragment key={item?.id}>
+              <div
+                className="slide"
+                style={{
+                  boxShadow: `0 5px 20px #000`,
+                  ...getStyles(i),
+                }}
+              >
+                <SliderContent {...item} />
+              </div>
+            </React.Fragment>
+          ))}
+        </div>
 
-      <div className="btns !text-white">
-        <button onClick={prev}>Left</button>
-        <button onClick={next}>Right</button>
+        <div className="absolute bottom-0 left-1/2 translate-x-[-50%] lg:mt-10 gap-2 lg:gap-4">
+          <button onClick={prev} className="p-2">
+            <Image
+              src={LeftNavigationIcon}
+              alt="left-navigation"
+              style={{ width: "auto", height: "auto" }}
+            />
+          </button>
+          <button onClick={next} className="p-2">
+            <Image
+              src={RightNavigationIcon}
+              alt="right-navigation"
+              style={{ width: "auto", height: "auto" }}
+            />
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   );
 };
 
 const SliderContent = (props: any) => {
   return (
     <div className="sliderContent">
-      {props.icon}
-      <h2>{props.title}</h2>
-      <p>{props.desc}</p>
+      <ProductCard
+        title="Silk Elegance Conditioner"
+        image={BottleImage}
+        price={125.25}
+      />
     </div>
   );
 };
