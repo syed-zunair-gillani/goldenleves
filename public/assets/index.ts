@@ -27,5 +27,6 @@ export { default as Product2Image } from "./images/product2.png";
 export { default as ProductBgImage } from "./images/product_bg.png";
 export { default as Drop1Image } from "./images/drop1.png";
 export { default as Drop2Image } from "./images/drop2.jpg";
+export { default as Drop3Image } from "./images/drop3.jpg";
 export { default as NavigationLeftImage } from "./images/Group 1000004746.png";
 export { default as NavigationRightImage } from "./images/Vector 3.png";
