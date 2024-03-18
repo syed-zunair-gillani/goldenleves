@@ -26,25 +26,25 @@ export default (props: any) => {
     else if (activeSlide - 1 === index)
       return {
         opacity: 1,
-        transform: "translateX(-240px) translateZ(-400px) rotateY(35deg)",
+        transform: "translateX(-240px) translateZ(-130px) rotateY(0deg)",
         zIndex: 9,
       };
     else if (activeSlide + 1 === index)
       return {
         opacity: 1,
-        transform: "translateX(240px) translateZ(-400px) rotateY(-35deg)",
+        transform: "translateX(240px) translateZ(-130px) rotateY(0deg)",
         zIndex: 9,
       };
     else if (activeSlide - 2 === index)
       return {
         opacity: 1,
-        transform: "translateX(-480px) translateZ(-500px) rotateY(35deg)",
+        transform: "translateX(-480px) translateZ(-220px) rotateY(0deg)",
         zIndex: 8,
       };
     else if (activeSlide + 2 === index)
       return {
         opacity: 1,
-        transform: "translateX(480px) translateZ(-500px) rotateY(-35deg)",
+        transform: "translateX(480px) translateZ(-220px) rotateY(0deg)",
         zIndex: 8,
       };
     else if (index < activeSlide - 2)
