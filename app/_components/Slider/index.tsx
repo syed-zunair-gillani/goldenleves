@@ -11,7 +11,7 @@ export default function Slider({ slides = [] }: { slides: any[] }) {
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
-        navigation={true}
+        navigation={false}
         modules={[EffectFade, Navigation]}
         className=""
       >

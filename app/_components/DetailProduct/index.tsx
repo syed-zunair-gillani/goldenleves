@@ -10,11 +10,11 @@ import Image from "next/image";
 const DetailProduct = () => {
   return (
     <div className="flex items-center flex-col section-padding">
-      <p className="section-heading-44">
+      <h2 className="section-heading-60">
         Essence of{" "}
         <span className="golden-gradient-text"> Opulence, Infused</span> in
         Every Drop
-      </p>
+      </h2>
       <div className="flex flex-col md:flex-row items-center gap-4 xl:gap-[35px] pt-9 pb-9">
         <div className="lg:-mt-[60px] xl:-mt-[120px]">
           <GoldenCard
