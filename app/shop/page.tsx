@@ -22,8 +22,7 @@ async function getData() {
 
 const Shop = async () => {
   const { products } = await getData();
-  console.log("🚀 ~ Shop ~ products:", products)
-
+  
   return (
     <div className="text-gray-300">
       {/* {JSON.stringify(products, null, 2)} */}
@@ -37,9 +36,7 @@ const Shop = async () => {
             key={idx}
             title={item?.name}
             slug={item.slug}
-            text="Experience the luxury of Silk Elixir Conditioner, providing deep
-          hydration, effortless detangling, and a captivating fragrance. Revel
-          in irresistibly soft and smooth hair with every use."
+            text={item?.acf?.excerpt}
             avatarData={{
               list: [...avatarList],
               label: "40000+",

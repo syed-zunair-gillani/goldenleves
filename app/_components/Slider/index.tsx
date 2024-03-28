@@ -42,12 +42,12 @@ export default function Slider({ slides = [] }: { slides: any[] }) {
       >
         {slides?.map((slide, index) => (
           <SwiperSlide key={index} className="">
-            <FeatureProductCard />
+            <FeatureProductCard data={slide}/>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      <div className="absolute top-[5%] z-50 right-[17%] lg:mt-10 gap-2 lg:gap-4">
+      <div className="absolute top-[0%] z-50 right-[17%] lg:mt-10 gap-2 lg:gap-4">
         <button
           onClick={goPrev}
           className={`p-2 ${currentSlide === 1 && "cursor-not-allowed"}`}

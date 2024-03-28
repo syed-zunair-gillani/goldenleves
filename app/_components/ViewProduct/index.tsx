@@ -36,7 +36,7 @@ const ViewProduct = ({ data }: any) => {
             />
            </div>
 
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 max-w-[460px]">
               <div className="flex items-center justify-between gap-4 px-5 py-3 border border-solid rounded-lg min-w-[220px]">
                 <p className="font-bold text-xl cursor-pointer">-</p>
                 <p className="text-sm">01</p>

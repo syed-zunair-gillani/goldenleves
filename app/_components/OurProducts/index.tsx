@@ -110,9 +110,9 @@ const SliderContent = (props: any) => {
   return (
     <div className="sliderContent">
       <ProductCard
-        title="Silk Elegance Conditioner"
-        image={BottleImage}
-        price={125.25}
+        title={props.name}
+        image={props?.images[0]?.src}
+        price={props?.price}
       />
     </div>
   );

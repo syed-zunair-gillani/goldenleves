@@ -1,3 +1,4 @@
+import api from "@/config/api";
 import {
   Header,
   FeatureProduct,
@@ -8,12 +9,27 @@ import {
 } from "./_components";
 import data from "./_components/OurProducts/data";
 
-export default function Home() {
+async function getData() {
+  const dataForProducts = {
+    per_page: 30,
+  };
+
+  const { data } = await api.get("products", dataForProducts);
+  return {
+    products: data,
+  };
+}
+
+
+export default async function Home() {
+  const { products } = await getData();
+  console.log("🚀 ~ Home ~ products:", products)
+  
   return (
     <main>
       <Header />
-      <FeatureProduct />
-      <OurProducts data={data} activeSlide={2}/>
+      <FeatureProduct data={products}/>
+      <OurProducts data={products} activeSlide={2}/>
       <DetailProduct />
       <BrandIdentity
         title={
