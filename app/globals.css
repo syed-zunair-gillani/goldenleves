@@ -158,3 +158,13 @@ h1 {
 }
 
 /* normal css  */
+
+.content ul{
+  list-style: disc;
+  padding-left: 1.2rem;
+}
+
+.specification > div{
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+} 

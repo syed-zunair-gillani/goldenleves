@@ -12,24 +12,28 @@ async function getData(slug: any) {
   };
 
   const { data } = await api.get("products", dataForProducts);
+  const productsRes = await api.get("products");
+
   if (!data) {
     return notFound();
   }
   return {
     products: data[0],
+    productslist : productsRes
   };
 }
 
 const SingleProduct = async (props: any) => {
-  // const { products } = await getData(props?.params?.slug);
-  const { products } = { products: {} };
+  const { products, productslist } = await getData(props?.params?.slug);
+
+  console.log("🚀 ~ SingleProduct ~ productslist:", productslist.data)
 
   return (
     <div>
-      {/* <pre className="text-gray-400">{JSON.stringify(products, null, 2)}</pre> */}
+      {/* <pre className="text-gray-400">{JSON.stringify(productslist, null, 2)}</pre> */}
       <ViewProduct data={products} />
       <ProductDetailTabs data={products} />
-      <RelatedProducts />
+      <RelatedProducts data={productslist?.data?.slice(0,4)}/>
     </div>
   );
 };

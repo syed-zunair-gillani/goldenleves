@@ -1,4 +1,5 @@
-"use client";
+'use client'
+
 import Image from "next/image";
 import { StarIcon } from "@/public/assets";
 import { ButtonOutlined } from "..";
@@ -7,10 +8,10 @@ import GallerySlider from "../GallerySlider";
 const ViewProduct = ({ data }: any) => {
   const wordsArray = data?.name?.split(" ") ?? "";
   return (
-    <div className="px-[100px] py-10">
-      <div className="flex items-center justify-between gap-[30px] flex-wrap">
+    <div className="container mx-auto px-4 py-10">
+      <div className="grid grid-cols-2 justify-between gap-[40px] flex-wrap">
         <div className="basis-full xl:basis-[50%]">
-          <GallerySlider />
+          <GallerySlider imagesList={data?.images}/>
         </div>
         <div className="flex flex-col gap-4">
           <h2 className="section-heading-44">
@@ -29,9 +30,11 @@ const ViewProduct = ({ data }: any) => {
             <p className="text-[32px] leading-[34px] text-white">
               {data?.price} USD
             </p>
-            <div
+           <div className="content">
+             <div
               dangerouslySetInnerHTML={{ __html: data?.short_description }}
             />
+           </div>
 
             <div className="flex items-center gap-4">
               <div className="flex items-center justify-between gap-4 px-5 py-3 border border-solid rounded-lg min-w-[220px]">

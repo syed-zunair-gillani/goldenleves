@@ -8,6 +8,7 @@ interface IShopProduct {
   direction?: string;
   title: string;
   text: string;
+  slug: string;
   productImage: string | StaticImageData;
   avatarData: {
     label: string;
@@ -20,7 +21,7 @@ interface IShopProduct {
 }
 
 const ShopProduct = (props: IShopProduct) => {
-  const { title, text, direction, avatarData, productImage } = props;
+  const { title, text, direction, avatarData, productImage, slug } = props;
   const router = useRouter();
   return (
     <div
@@ -58,14 +59,14 @@ const ShopProduct = (props: IShopProduct) => {
         <div className="flex relative items-center flex-col md:flex-row gap-8 pt-8 xl:w-[70%]">
           <ButtonContained
             onClick={() => {
-              router.push("/shop/slug");
+              router.push(`/shop/${slug}`)
             }}
           >
             Buy Now!
           </ButtonContained>
           <ButtonOutlined
             onClick={() => {
-              router.push("/shop/slug");
+              router.push(`/shop/${slug}`)
             }}
           >
             Shop Now
@@ -83,7 +84,7 @@ const ShopProduct = (props: IShopProduct) => {
         <div className="scale-[1.2] lg:scale-[1.25] xl:scale-[1.35] ">
           <motion.figure
             initial={{ scale: 0, opacity: 0 }}
-            whileInView={{ scale: 1, opacity: 1 }}
+            whileInView={{ scale: 1.8, opacity: 1 }}
             transition={{ duration: 2 }}
             viewport={{ once: true }}
           >

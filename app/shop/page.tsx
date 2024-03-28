@@ -21,40 +21,36 @@ async function getData() {
 }
 
 const Shop = async () => {
-  // const { products } = await getData();
+  const { products } = await getData();
+  console.log("🚀 ~ Shop ~ products:", products)
 
   return (
     <div className="text-gray-300">
       {/* {JSON.stringify(products, null, 2)} */}
       <ShopHeader />
       <UserLove />
-      <ShopProduct
-        direction="reverse"
-        title="Radiant Gold shampoo"
-        text="Experience the luxury of Silk Elixir Conditioner, providing deep
+      {
+        products?.map((item: any, idx: number) => (
+          <div className={`${idx===0 ? '' : 'pt-[40px] xl:pt[100px]'}`}>
+          <ShopProduct
+            direction={idx%2 === 0 ? 'reverse' : ''}
+            key={idx}
+            title={item?.name}
+            slug={item.slug}
+            text="Experience the luxury of Silk Elixir Conditioner, providing deep
           hydration, effortless detangling, and a captivating fragrance. Revel
           in irresistibly soft and smooth hair with every use."
-        avatarData={{
-          list: [...avatarList],
-          label: "40000+",
-          caption: "Reviews",
-        }}
-        productImage={BottleImage}
-      />
-      <div className="pt-[40px] xl:pt[100px]">
-        <ShopProduct
-          title="Silk elegance conditioner"
-          text="Experience the luxury of Silk Elixir Conditioner, providing deep
-          hydration, effortless detangling, and a captivating fragrance. Revel
-          in irresistibly soft and smooth hair with every use."
-          avatarData={{
-            list: [...avatarList],
-            label: "40000+",
-            caption: "Reviews",
-          }}
-          productImage={Product2Image}
-        />
-      </div>
+            avatarData={{
+              list: [...avatarList],
+              label: "40000+",
+              caption: "Reviews",
+            }}
+            productImage={item.images[0]?.src}
+          />
+          </div>
+        ))
+      }
+
       <BrandIdentity
         title={
           <h2 className="section-heading-44 uppercase">

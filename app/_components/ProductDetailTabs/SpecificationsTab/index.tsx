@@ -1,7 +1,7 @@
 const SpecificationsTab = ({data}:any) => {
   return (
     <>
-      <div dangerouslySetInnerHTML={{ __html: data?.acf?.specifications}}/>
+      <div className="specification" dangerouslySetInnerHTML={{ __html: data?.acf?.specifications}}/>
     </>
   );
 };

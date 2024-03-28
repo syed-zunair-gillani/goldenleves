@@ -30,14 +30,14 @@ const Tabs = ({ tabs, data }: any) => {
           </div>
         ))}
       </div>
-      <div className="mt-4">{tabsObj[activeTab]}</div>
+      <div className="mt-6 pb-10">{tabsObj[activeTab]}</div>
     </div>
   );
 };
 
 const ProductDetailTabs = ({data}:any) => {
   return (
-    <div className="px-[100px] py-10">
+    <div className="container mx-auto px-4 py-10">
       <Tabs tabs={tabs} data={data}/>
     </div>
   );
