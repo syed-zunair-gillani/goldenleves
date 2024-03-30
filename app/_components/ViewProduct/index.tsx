@@ -1,12 +1,15 @@
 'use client'
-
 import Image from "next/image";
 import { StarIcon } from "@/public/assets";
 import { ButtonOutlined } from "..";
 import GallerySlider from "../GallerySlider";
+import { useContext } from "react";
+import { GlobalContext } from "@/context/globalContext";
 
 const ViewProduct = ({ data }: any) => {
   const wordsArray = data?.name?.split(" ") ?? "";
+  const {quantity, setQuantity, handleAdtoCart} = useContext(GlobalContext)
+
   return (
     <div className="container mx-auto px-4 py-10">
       <div className="grid grid-cols-2 justify-between gap-[40px] flex-wrap">
@@ -38,11 +41,13 @@ const ViewProduct = ({ data }: any) => {
 
             <div className="flex items-center gap-4 max-w-[460px]">
               <div className="flex items-center justify-between gap-4 px-5 py-3 border border-solid rounded-lg min-w-[220px]">
-                <p className="font-bold text-xl cursor-pointer">-</p>
-                <p className="text-sm">01</p>
-                <p className="font-bold text-xl cursor-pointer">+</p>
+                <p className="font-bold text-xl cursor-pointer" onClick={()=>{
+                  quantity <= 0 ? setQuantity(0) : setQuantity(quantity-1)
+                }}>-</p>
+                <p className="text-sm">{quantity}</p>
+                <p className="font-bold text-xl cursor-pointer" onClick={()=>setQuantity(quantity+1)}>+</p>
               </div>
-              <ButtonOutlined style={{ width: "220px" }} full>
+              <ButtonOutlined style={{ width: "220px" }} onClick={() => handleAdtoCart(data)} >
                 Add to Cart
               </ButtonOutlined>
             </div>

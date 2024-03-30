@@ -26,8 +26,6 @@ async function getData(slug: any) {
 const SingleProduct = async (props: any) => {
   const { products, productslist } = await getData(props?.params?.slug);
 
-  console.log("🚀 ~ SingleProduct ~ productslist:", productslist.data)
-
   return (
     <div>
       {/* <pre className="text-gray-400">{JSON.stringify(productslist, null, 2)}</pre> */}

@@ -9,6 +9,7 @@ import {
 } from "./_components";
 import data from "./_components/OurProducts/data";
 
+
 async function getData() {
   const dataForProducts = {
     per_page: 30,
@@ -23,7 +24,6 @@ async function getData() {
 
 export default async function Home() {
   const { products } = await getData();
-  console.log("🚀 ~ Home ~ products:", products)
   
   return (
     <main>

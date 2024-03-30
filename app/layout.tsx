@@ -5,6 +5,9 @@ import "./globals.css";
 import GlobalProvider from "@/context/globalContext";
 import GlobalLayout from "./_components/layout/globalLayout";
 
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -24,6 +27,7 @@ export default function RootLayout({
           <GlobalLayout>
             <Navbar />
             {children}
+            <ToastContainer />
             <Footer />
           </GlobalLayout>
         </GlobalProvider>

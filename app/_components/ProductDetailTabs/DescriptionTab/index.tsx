@@ -4,7 +4,7 @@ const DescriptionTab = ({data}:any) => {
       <h5 className="text-xl leading-[34px] golden-gradient-text pb-[6px]">
         Description
       </h5>
-      <div dangerouslySetInnerHTML={{ __html: data?.description}}/>
+      <div className="content" dangerouslySetInnerHTML={{ __html: data?.description}}/>
     </div>
   );
 };
