@@ -5,7 +5,7 @@ import { useContext } from "react";
 import { GlobalContext } from "@/context/globalContext";
 
 const MenuIcons = ({ handleMobileNav }: { handleMobileNav: () => void }) => {
-  const {setCartOpen} = useContext(GlobalContext)
+  const {setCartOpen, cartProduct} = useContext(GlobalContext)
 
   const handleCartSideBar = () => {
     setCartOpen(true)
@@ -19,9 +19,10 @@ const MenuIcons = ({ handleMobileNav }: { handleMobileNav: () => void }) => {
       <span className="cursor-pointer hover:text-gray-400">
         <Image src={UserIcon} alt="user" width={28} height={28} />
       </span>
-      <span className="cursor-pointer hover:text-gray-400" onClick={handleCartSideBar}>
+      <div className="cursor-pointer relative hover:text-gray-400" onClick={handleCartSideBar}>
         <Image src={CartIcon} alt="cart" width={28} height={28} />
-      </span>
+         <span className="absolute text-[9px] right-1 bottom-0 rounded-full flex justify-center items-center bg-white text-black w-3 h-3">{cartProduct.length || 0 }</span>
+      </div>
       <span
         className="menu-icon cursor-pointer md:hidden"
         onClick={handleMobileNav}

@@ -2,7 +2,7 @@
 export { default as LogoIcon } from "./icons/logo.svg";
 export { default as SearchIcon } from "./icons/searchIcon.svg";
 export { default as UserIcon } from "./icons/userIcon.svg";
-export { default as CartIcon } from "./icons/cartIcon.svg";
+export { default as CartIcon } from "./icons/bag.svg";
 export { default as EllipseBgIcon } from "./icons/ellipse.svg";
 export { default as SolarMedalIcon } from "./icons/solar_medal-ribbon-linear.svg";
 export { default as SolarUserIcon } from "./icons/solar_users-group-rounded-linear.svg";

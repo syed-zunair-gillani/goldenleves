@@ -3,8 +3,10 @@ import Image from "next/image";
 import { ButtonOutlined } from "..";
 import { BottleImage } from "@/public/assets";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const FeatureProductCard = ({data}:any) => {
+  console.log("🚀 ~ FeatureProductCard ~ data:", data)
   const router = useRouter()
   return (
     <div className="flex flex-col md:flex-row items-center gap-4 xl:gap-[40px] flex-wrap">
@@ -16,12 +18,14 @@ const FeatureProductCard = ({data}:any) => {
       </div>
       <div className="flex-1">
         <p className="golden-gradient-text text-3xl pb-4">
-          {data?.name}
+          {data?.name}- {data.slug}
         </p>
         <div className="pb-10 content" dangerouslySetInnerHTML={{ __html: data?.short_description }}/>
-        <ButtonOutlined onClick={() => router.push(`/shop/${data?.slug}`)} style={{ padding: "0.75rem 4rem" }}>
+        <Link href={`/shop/${data?.slug}`}>
+        <ButtonOutlined style={{ padding: "0.75rem 4rem" }}>
           Shop Now
         </ButtonOutlined>
+        </Link>
       </div>
     </div>
   );

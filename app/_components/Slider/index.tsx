@@ -53,7 +53,7 @@ export default function Slider({ slides = [] }: { slides: any[] }) {
           className={`p-2 ${currentSlide === 1 && "cursor-not-allowed"}`}
         >
           <p className="text-white">
-            {currentSlide === 1 ? "---" : currentSlide - 1}
+            {currentSlide === 1 ? "1" : currentSlide}
           </p>
           <Image
             src={LeftNavigationIcon}
@@ -68,7 +68,7 @@ export default function Slider({ slides = [] }: { slides: any[] }) {
           }`}
         >
           <p className="text-white">
-            {currentSlide === slides?.length ? "---" : currentSlide + 1}
+            {currentSlide === slides?.length ? currentSlide : currentSlide + 1}
           </p>
           <Image
             src={RightNavigationIcon}

@@ -12,7 +12,7 @@ const ButtonOutLined = ({
       <button
         {...rest}
         type="button"
-        className="w-full golden-gradient-text py-3 px-[34px]"
+        className="w-full golden-gradient-text py-[14px] px-[34px]"
         onClick={onClick}
       >
         {children}

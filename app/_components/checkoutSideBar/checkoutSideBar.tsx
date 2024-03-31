@@ -5,6 +5,7 @@ import React, { useContext } from 'react'
 import { BottleImage, StarIcon } from "@/public/assets";
 import ButtonOutLined from '../ButtonOutlined';
 import { calculateTotalPrice } from '@/app/utils';
+import Link from 'next/link';
 
 const CheckoutSideBar = () => {
      const { cartOpen, setCartOpen, cartProduct, decreaseQuantity, increaseQuantity, removeItemFromCart } = useContext(GlobalContext)
@@ -22,7 +23,7 @@ const CheckoutSideBar = () => {
                     {/* cart Items  */}
                     <div className='mt-7 h-[calc(100vh-380px)] overflow-auto '>
                          {
-                              cartProduct?.map((item:any, idx:number) => (
+                              cartProduct?.map((item: any, idx: number) => (
                                    <div key={idx} className='flex gap-4 border-b-[.5px] border-[#AFAFAF] py-4'>
                                         <figure className='bg-[#070707] p-2 relative rounded-lg w-[100px] flex h-[90px] items-center justify-center'>
                                              <Image src={item?.images[0]?.src} alt="BottleImage" width={50} height={50} />
@@ -35,9 +36,9 @@ const CheckoutSideBar = () => {
                                              </div>
                                              <div className='flex justify-between gap-4'>
                                                   <div className="flex items-center mt-2 justify-between gap-4 px-2 py-1 border-[1px] border-[#AFAFAF] border-solid rounded-md ">
-                                                       <p className="font-bold text-sm cursor-pointer" onClick={()=>decreaseQuantity(item)}>-</p>
+                                                       <p className="font-bold text-sm cursor-pointer" onClick={() => decreaseQuantity(item)}>-</p>
                                                        <p className="text-sm">{item?.quantity}</p>
-                                                       <p className="font-bold text-sm cursor-pointer" onClick={()=>increaseQuantity(item)}>+</p>
+                                                       <p className="font-bold text-sm cursor-pointer" onClick={() => increaseQuantity(item)}>+</p>
                                                   </div>
                                                   <Image src="/assets/icons/trash.svg" alt="close" width={20} height={20} onClick={() => removeItemFromCart(item)} />
                                              </div>
@@ -45,6 +46,7 @@ const CheckoutSideBar = () => {
                                    </div>
                               ))
                          }
+
                     </div>
                </div>
                {/* cart footer  */}
@@ -63,9 +65,11 @@ const CheckoutSideBar = () => {
                               <span>${calculateTotalPrice(cartProduct)}.00</span>
                          </p>
                     </div>
-                    <ButtonOutLined style={{width: '100%'}}>
-                         Checkout
-                    </ButtonOutLined>
+                    <Link href="/checkout" onClick={()=>setCartOpen(false)}>
+                         <ButtonOutLined style={{ width: '100%' }}>
+                              Checkout
+                         </ButtonOutLined>
+                    </Link>
                </div>
           </section>
      )
