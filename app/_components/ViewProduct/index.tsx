@@ -12,7 +12,7 @@ const ViewProduct = ({ data }: any) => {
 
   return (
     <div className="container mx-auto px-4 py-10">
-      <div className="grid grid-cols-2 justify-between gap-[40px] flex-wrap">
+      <div className="grid lg:grid-cols-2 justify-between gap-[40px] flex-wrap">
         <div className="basis-full xl:basis-[50%]">
           <GallerySlider imagesList={data?.images}/>
         </div>

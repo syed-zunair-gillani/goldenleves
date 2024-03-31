@@ -16,6 +16,11 @@
   }
 }
 
+@font-face {
+  font-family: Glamore;
+  src: url('../public/assets/fonts/Glamore.ttf');
+}
+
 body {
   background-color: #080808ff;
 }

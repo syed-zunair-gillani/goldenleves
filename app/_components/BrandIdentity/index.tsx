@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 
 const BrandIdentity = ({ title }: { title: string | ReactNode }) => {
   return (
-    <div className="section-padding relative rounded-2xl overflow-hidden">
+    <div className="section-padding relative rounded-2xl overflow-hidden container mx-auto px-3 md:px-0">
       <div
         style={{
           clipPath: "polygon(0% 0%, 100% 0, 100% 0, 80% 100%, 0% 100%)",

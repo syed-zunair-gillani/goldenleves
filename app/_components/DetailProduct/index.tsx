@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const DetailProduct = () => {
   return (
-    <div className="flex items-center flex-col section-padding">
+    <div className="flex items-center flex-col section-padding container mx-auto px-3 md:px-0">
       <h2 className="section-heading-60">
         Essence of{" "}
         <span className="golden-gradient-text"> Opulence, Infused</span> in

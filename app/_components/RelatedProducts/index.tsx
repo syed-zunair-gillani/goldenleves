@@ -17,7 +17,7 @@ const RelatedProducts = ({data}:any) => {
           <ButtonOutlined onClick={() => router.push('/shop')}>View All</ButtonOutlined>
         </div>
       </div>
-      <div className="flex items-start justify-between gap-[30px] flex-wrap w-full">
+      <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-[30px]  w-full">
         {data?.map((item:any,idx:number) => (
           <Card
             title={item.name}
