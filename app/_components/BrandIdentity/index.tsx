@@ -11,7 +11,7 @@ const BrandIdentity = ({ title }: { title: string | ReactNode }) => {
       >
         {title}
       </div>
-      <div className="w-full h-[646px] rounded-2xl overflow-hidden">
+      <div className="w-full h-[300] md:h-[646px] rounded-2xl overflow-hidden">
         <iframe
           width="100%"
           height="100%"

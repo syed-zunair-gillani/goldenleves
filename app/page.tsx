@@ -8,6 +8,7 @@ import {
   DetailProduct,
 } from "./_components";
 import data from "./_components/OurProducts/data";
+import MobileOurProduct from "./_components/OurProducts/mobileOurProduct";
 
 
 async function getData() {
@@ -26,7 +27,7 @@ export default async function Home() {
   const { products } = await getData();
   
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <Header />
       <FeatureProduct data={products}/>
       <OurProducts data={products} activeSlide={2}/>

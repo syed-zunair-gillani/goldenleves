@@ -47,7 +47,7 @@ export default function Slider({ slides = [] }: { slides: any[] }) {
         ))}
       </Swiper>
 
-      <div className="absolute top-[0%] z-50 right-[21%] lg:mt-10 gap-2 lg:gap-4">
+      <div className="absolute top-[0%] z-50 right-[21%] lg:mt-10 gap-2 lg:gap-4 hidden lg:block">
         <button
           onClick={goPrev}
           className={`p-2 ${currentSlide === 1 && "cursor-not-allowed"}`}

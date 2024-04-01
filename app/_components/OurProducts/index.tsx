@@ -66,8 +66,8 @@ export default (props: any) => {
       <h2 className="section-heading-60 text-center mb-12">
         Our Products
       </h2>
-      <div className="min-h-[742px] flex justify-center relative pt-4">
-        <div>
+      <div className="min-h-[200px] md:min-h-[742px] flex justify-center relative pt-4 mb-[100px] md:mb-0 scale-[0.4] md:scale-100">
+        <div className="mt-[-220px] md:mt-0">
           <div className="slideC">
             {props.data.map((item: any, i: number) => (
               <React.Fragment key={item?.id}>
@@ -84,7 +84,7 @@ export default (props: any) => {
             ))}
           </div>
 
-          <div className="absolute bottom-0 left-1/2 translate-x-[-50%] lg:mt-10 gap-2 lg:gap-4">
+          <div className="absolute bottom-[-360px] md:bottom-0 left-1/2 translate-x-[-50%] lg:mt-10 gap-2 lg:gap-4">
             <button onClick={prev} className="p-2">
               <Image
                 src={LeftNavigationIcon}

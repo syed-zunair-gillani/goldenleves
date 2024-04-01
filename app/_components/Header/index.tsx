@@ -36,7 +36,7 @@ const Header = () => {
   }, [isScrolled]);
 
   return (
-    <div className={`flex flex-col z-1 px-6 items-center bg-center md:bg-contain text-center gap-6 md:gap-16 pt-[120px] pb-10 md:pb-2 mt-6 md:mt-12 md:pt-[210px] bg-no-repeat relative`}>
+    <div className={`flex flex-col z-1 px-6 items-center bg-center md:bg-contain text-center gap-6 md:gap-16 pt-[120px] pb-10 md:pb-2 mt-6 md:mt-12 md:pt-[210px] bg-no-repeat relative h-screen md:h-auto`}>
       <div className="absolute bg-[#080808ff] opacity-25 top-0 bottom-0 left-0 right-0 z-0" />
       <motion.h1
         initial={{ y: 420, visibility: 'hidden', opacity: 0 }}
@@ -63,7 +63,7 @@ const Header = () => {
       <motion.figure
         initial={{ y: 420, visibility: 'hidden', opacity: 0 }}
         animate={imageControls}
-        className="flex-1 -mt-[650px]"
+        className="flex-1 -mt-[430px] md:-mt-[650px]"
       >
           <Image src={BottleImage} alt="product" width={456} height={420} />
       </motion.figure>

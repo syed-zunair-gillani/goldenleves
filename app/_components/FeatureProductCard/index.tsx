@@ -10,7 +10,7 @@ const FeatureProductCard = ({data}:any) => {
   const router = useRouter()
   return (
     <div className="flex flex-col md:flex-row items-center gap-4 xl:gap-[40px] flex-wrap">
-      <h2 className="flex-1 font-medium text-lg md:text-3xl md:leading-[46px]">
+      <h2 className="flex-1 font-medium text-center md:text-left text-lg md:text-3xl md:leading-[46px]">
         {data?.acf?.excerpt}
       </h2>
       <div className="flex-1 min-h-[650px] flex justify-center items-center">
@@ -18,7 +18,7 @@ const FeatureProductCard = ({data}:any) => {
       </div>
       <div className="flex-1">
         <p className="golden-gradient-text text-3xl pb-4">
-          {data?.name}- {data.slug}
+          {data?.name}
         </p>
         <div className="pb-10 content" dangerouslySetInnerHTML={{ __html: data?.short_description }}/>
         <Link href={`/shop/${data?.slug}`}>
